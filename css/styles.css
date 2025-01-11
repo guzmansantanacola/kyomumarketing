@@ -79,8 +79,8 @@ header {
   text-decoration: underline;
   color: #dac9df !important;
   transform: scale(1.1);
+  text-shadow: 0 4px 6px #dac9df;
 }
-
 .navbar-toggler {
   border: none;
   outline: none;
@@ -109,7 +109,6 @@ main {
   flex-direction: row;
   justify-content: space-between; 
   align-items: center;
-  padding: 2rem 0;
   min-height: 100vh;
   width: 100%;
 }
@@ -164,8 +163,7 @@ main {
 }
 .services-title {
   text-align: center;
-  padding-top: 3rem;
-  margin-bottom: 3rem;
+  padding: 5rem;
   font-family: "Roboto", serif;
   color: white;
   font-weight: 300;
@@ -178,15 +176,22 @@ main {
 }
 
 .services-row {
-  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 50px;
+  height: 35rem;
 }
+.services-p{
+  padding: 3rem;
 
+}
 .service-item {
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
+  height: 100%;         
 }
 .services-dropdown{
   font-weight: 400;
@@ -201,6 +206,11 @@ main {
   font-size: 1.3rem;
   color: #1a1a1a;
 }
+p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .services-contact{
   text-decoration: none;
   color: #9ce0db; 
@@ -331,9 +341,7 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  main {
-    padding: 1rem 0;
-  }
+
   .services-title {
     text-align: center;
   }
