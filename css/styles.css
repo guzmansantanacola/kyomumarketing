@@ -35,9 +35,9 @@ body {
   height: 100%;
   background-image: url("../images/background.gif");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: 0;
+  background-size: 100% auto; /* Ajusta el ancho de la imagen al 100% */
+  background-position: center; /* Centra la imagen */
+  z-index: 0;;
 }
 
 /* Header y Navegación */
@@ -120,8 +120,7 @@ main {
   background-color: #2d2c2c;
   background-image: url('../images/wave.png');
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   min-height: calc(100vh - 200px);
 }
 /* Estilos del contenido de la página principal */
@@ -160,8 +159,7 @@ main {
 /* Estilos de servicios */
 .services-main {
   display: block;
-  min-height: calc(100vh - 200px);
-  
+
 }
 .services-title {
   text-align: center;
