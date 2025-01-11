@@ -120,10 +120,12 @@ main {
   background-color: #2d2c2c;
   background-image: url('../images/wave.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  min-height: calc(100vh - 200px);
-  position: relative; /* Añade esto */
+  background-size: 100% auto;
+  max-height: 100%; /* Añade esto */
+  overflow: hidden;
+  position: relative;
 }
+
 /* Estilos del contenido de la página principal */
 #logobanner {
   width: 100%;
