@@ -79,7 +79,7 @@ header {
   text-decoration: underline;
   color: #dac9df !important;
   transform: scale(1.1);
-  text-shadow: 0 4px 6px #dac9df;
+  text-shadow: 0 1px 2px #dac9df;
 }
 .navbar-toggler {
   border: none;
@@ -116,7 +116,14 @@ main {
   position: relative;
   z-index: 2;
 }
-
+#bodyServicios{
+  background-color: #2d2c2c;
+  background-image: url('../images/wave.png');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: calc(100vh - 200px);
+}
 /* Estilos del contenido de la página principal */
 #logobanner {
   width: 100%;
@@ -153,11 +160,6 @@ main {
 /* Estilos de servicios */
 .services-main {
   display: block;
-  background-color: #2d2c2c;
-  background-image: url('../images/wave.png');
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   min-height: calc(100vh - 200px);
   
 }
