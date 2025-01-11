@@ -116,12 +116,13 @@ main {
   position: relative;
   z-index: 2;
 }
-#bodyServicios{
+#bodyServicios {
   background-color: #2d2c2c;
   background-image: url('../images/wave.png');
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: contain;
   min-height: calc(100vh - 200px);
+  position: relative; /* Añade esto */
 }
 /* Estilos del contenido de la página principal */
 #logobanner {
@@ -310,6 +311,7 @@ footer {
   padding: 2rem 0;
   width: 100%;
   margin-top: auto;
+  z-index: 1;
 }
 
 #footerlogo {
