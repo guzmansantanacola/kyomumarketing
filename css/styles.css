@@ -264,7 +264,50 @@ p {
   border-radius: 8px;
   background-color: #f8f9fa;
 }
+/* Estilos para las tarjetas de los clientes */
+.cliente-card {
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
+  height: 100%;        
+}
+/* .clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
 
+
+
+/* Imagen circular con tamaño uniforme */
+.cliente-card img {
+  width: 200px; /* Ajusta según el tamaño deseado */
+  height: 150px; /* Mantiene las proporciones cuadradas */
+
+}
+
+/* Títulos de los clientes */
+.cliente-card h3 {
+  font-size: 1.25rem;
+  font-family: "Roboto", serif;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.cliente-1{
+  background-color: #faba72
+}
+.cliente-2{
+  background-color: white;
+}
+/* Descripción de los clientes */
+.cliente-card p {
+  font-size: 1rem;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
   .clientes-title {
