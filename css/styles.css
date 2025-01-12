@@ -21,6 +21,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background-color: #2d2c2c;
 }
 
@@ -35,7 +38,7 @@ body {
   height: 100%;
   background-image: url("../images/background.gif");
   background-repeat: no-repeat;
-  background-size: 100% auto; /* Ajusta el ancho de la imagen al 100% */
+  background-size: cover; /* Ajusta el ancho de la imagen al 100% */
   background-position: center; /* Centra la imagen */
   z-index: 0;;
 }
@@ -117,12 +120,10 @@ main {
   z-index: 2;
 }
 #bodyServicios {
-  background-color: #2d2c2c;
   background-image: url('../images/wave.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  max-height: 100%; /* Añade esto */
-  position: relative;
+  background-position: top;
+  background-size: 100% clamp(300px, 50vh, 800px);
 }
 
 /* Estilos del contenido de la página principal */
@@ -180,14 +181,14 @@ main {
 .services-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 35rem;
+
 }
 .services-p{
   padding: 3rem;
 
 }
 .service-item {
-  padding: 20px;
+  padding: 4rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -312,7 +313,7 @@ footer {
   padding: 2rem 0;
   width: 100%;
   margin-top: auto;
-  z-index: 1;
+
 }
 
 #footerlogo {
