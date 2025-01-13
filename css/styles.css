@@ -256,43 +256,100 @@ p {
   font-weight: 300;
   font: 2.5rem;
 }
-.tipstitulo{
-
+.tipstitulo {  
   background-image: url('../images/shapes.png');
+  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  text-align: center;
+  background-position: center; 
+  font-size: 2.5rem;
   padding: 5rem;
   font-family: "Roboto", serif;
   color: white;
   font-weight: 300;
-  font-size: 2.5rem;
-  margin-bottom: 0;
 }
-.clientes-span {
-  color: #5dc1b9;
-}
+
+
+
 .tiplist{
   list-style: none;
   color: white;
+}
+.tiplist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tiplist li {
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+  line-height: 1.5;
+}
+/* Media queries */
+@media (max-width: 768px) {
+  .tipstitulo {
+      padding: 2rem 1rem;
+  }
+
+  .clientes-row {
+      padding: 1rem;
+      gap: 1rem;
+  }
+
+  .tip-card {
+      padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tipstitulo {
+      padding: 1.5rem 1rem;
+  }
+
+  .tip-card {
+      padding: 1.25rem;
+  }
+  
+  .tiplist li {
+      align-items: flex-start;
+  }
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1400px) {
+  .clientes-row {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* Alineación de los textos y ajuste de tamaño */
 .clientes-main {
   padding: 2rem 1rem;
 }
 
-.tip-card h3 {
-  font-size: 2rem;
-  text-align: center;
-  color: #ba8cd7;
-}
-
 .tip-card {
-  padding: 1rem;
-  background-color: #313131;
+
+  padding: 4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
-  border-right: #1a1a1a 1px solid;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.tip-card h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+.tip-card h3 span {
+  font-size: 1.2em;
 }
 /* Estilos para las tarjetas de los clientes */
 .cliente-card {
@@ -304,13 +361,39 @@ p {
   align-items: center;   
   height: 100%;        
 }
-.clientes-row{
+.clientes-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
- 
-
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+/* Selectores corregidos para los tip cards */
+.clientes-row > div:nth-child(1) .tip-card {
+  background-color: #81638b;
+}
+
+.clientes-row > div:nth-child(2) .tip-card {
+  background-color: #a279ac;
+}
+
+.clientes-row > div:nth-child(3) .tip-card {
+  background-color: #b08dbd;
+}
+
+.clientes-row > div:nth-child(4) .tip-card {
+  background-color: #9ce0db;
+}
+
+.clientes-row > div:nth-child(5) .tip-card {
+  background-color: #4eb3ab;
+}
+
+.clientes-row > div:nth-child(6) .tip-card {
+  background-color: #7cccc5;
+}
+
+
 
 /* Imagen circular con tamaño uniforme */
 .cliente-card img {
@@ -410,26 +493,6 @@ p {
 .valoresrow{
   padding-bottom: 10rem;
 }
-/* Estilos para la sección del equipo */
-.team-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.team-card img {
-  border: 3px solid #ba8cd7;
-}
-
-.team-card h4 {
-  color: #ba8cd7;
-}
 
 /* Títulos principales */
 h1, h2 {
@@ -443,7 +506,7 @@ h1, h2 {
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .nosotros-card, .valores-card, .team-card {
+  .nosotros-card, .team-card {
       margin-bottom: 1rem;
   }
   
@@ -451,6 +514,151 @@ h1, h2 {
       font-size: 1.5rem;
   }
 }
+
+
+/* Estilos específicos para la página de contacto */
+#bodyContacto {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.contact-main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Estilos para el formulario */
+.title-contact{
+  padding: 5rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+.contact-form-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.contact-form-card h2 {
+  color: #ba8cd7;
+  font-size: 1.8rem;
+}
+
+.form-label {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(186, 140, 215, 0.3);
+  color: #ffffff;
+  padding: 0.8rem;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ba8cd7;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(186, 140, 215, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-btn {
+  background-color: #ba8cd7;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #9a6cb7;
+  transform: translateY(-2px);
+}
+
+/* Estilos para la información de contacto */
+.contact-info-card {
+  background-color: rgba(186, 140, 215, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.contact-info-card h2 {
+  color: #ba8cd7;
+  font-size: 1.8rem;
+}
+
+.contact-info-item {
+  margin-bottom: 2rem;
+}
+
+.contact-info-item i {
+  font-size: 1.5rem;
+  color: #ba8cd7;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.contact-info-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-info-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para redes sociales */
+.contact-social {
+  margin-top: 3rem;
+}
+
+.contact-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ba8cd7;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contact-info-card {
+      margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form-card,
+  .contact-info-card {
+      padding: 1.5rem;
+  }
+}
+
+
 
 
 
