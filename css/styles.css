@@ -524,6 +524,10 @@ h1, h2 {
 
 .contact-main {
   min-height: calc(100vh - 200px);
+  background-image: url("../images/contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Estilos para el formulario */
@@ -533,16 +537,16 @@ h1, h2 {
     font-size: 2.5rem;
 }
 .contact-form-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #1a1a1a9e;
   backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 10px;
   height: 100%;
 }
 
 .contact-form-card h2 {
   color: #ba8cd7;
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .form-label {
@@ -583,16 +587,19 @@ h1, h2 {
 
 /* Estilos para la información de contacto */
 .contact-info-card {
-  background-color: rgba(186, 140, 215, 0.1);
+  background-color: #1a1a1a9e;
   backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 10px;
   height: 100%;
 }
-
+.contactlogo{
+  width: 100%;
+  padding: 3rem;
+}
 .contact-info-card h2 {
   color: #ba8cd7;
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .contact-info-item {
