@@ -10,7 +10,9 @@
   font-weight: 100;
   font-style: normal;
 }
-
+h1{
+  margin: 0;
+}
 /* Estructura base */
 html, body {
   min-height: 100vh;
@@ -24,7 +26,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #2d2c2c;
+  background-color: #1a1a1a;
 }
 
 /* Background para página principal */
@@ -162,7 +164,7 @@ main {
 /* Estilos de servicios */
 .services-main {
   display: block;
-
+  min-height: unset;
 }
 .services-title {
   text-align: center;
@@ -241,28 +243,56 @@ p {
 
 
 /* Clientes */
-.clientes-title {
-  font-size: 2rem;
-}
 
+.clientes-title {
+  background-image: url('../images/shapes2.png');
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  padding: 5rem;
+  font-family: "Roboto", serif;
+  color: white;
+  font-weight: 300;
+  font: 2.5rem;
+}
+.tipstitulo{
+
+  background-image: url('../images/shapes.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem;
+  font-family: "Roboto", serif;
+  color: white;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
 .clientes-span {
   color: #5dc1b9;
 }
-
+.tiplist{
+  list-style: none;
+  color: white;
+}
 /* Alineación de los textos y ajuste de tamaño */
 .clientes-main {
   padding: 2rem 1rem;
 }
 
-.clientes-title, .tip-card h3 {
+.tip-card h3 {
   font-size: 2rem;
+  text-align: center;
+  color: #ba8cd7;
 }
 
 .tip-card {
   padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f8f9fa;
+  background-color: #313131;
+  height: 100%;
+  border-right: #1a1a1a 1px solid;
 }
 /* Estilos para las tarjetas de los clientes */
 .cliente-card {
@@ -274,11 +304,13 @@ p {
   align-items: center;   
   height: 100%;        
 }
-/* .clientes-grid {
+.clientes-row{
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+ 
 
-
+}
 
 /* Imagen circular con tamaño uniforme */
 .cliente-card img {
@@ -289,7 +321,6 @@ p {
 
 /* Títulos de los clientes */
 .cliente-card h3 {
-  font-size: 1.25rem;
   font-family: "Roboto", serif;
   color: #333;
   margin-top: 1rem;
@@ -299,7 +330,7 @@ p {
   background-color: #faba72
 }
 .cliente-2{
-  background-color: white;
+  background-color: #f9f9f9;
 }
 /* Descripción de los clientes */
 .cliente-card p {
@@ -308,12 +339,131 @@ p {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
 }
+
+/* Estilos para la página Nosotros */
+#bodyNosotros {
+  background-color: #1a1a1a;
+  color: #ffffff;
+
+}
+.services-nosotros{
+  background-image: url('../images/waves2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Estilos para las cards principales */
+.nosotros-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  color: white;
+  min-height: 250px;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nosotros-card .card-title {
+  color: #ba8cd7;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.nosotros-card .card-title i {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.nosotros-card .card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de valores */
+.valores-card {
+  background-color: rgba(186, 140, 215, 0.1);
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.valores-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(186, 140, 215, 0.15);
+}
+
+.valores-card i {
+  color: #ba8cd7;
+  margin-bottom: 1rem;
+}
+
+.valores-card h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.valoresrow{
+  padding-bottom: 10rem;
+}
+/* Estilos para la sección del equipo */
+.team-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.team-card img {
+  border: 3px solid #ba8cd7;
+}
+
+.team-card h4 {
+  color: #ba8cd7;
+}
+
+/* Títulos principales */
+h1, h2 {
+  font-weight: 600;
+}
+
+.nosotrostitle{
+  padding: 5rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nosotros-card, .valores-card, .team-card {
+      margin-bottom: 1rem;
+  }
+  
+  .nosotros-card .card-title {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
   .clientes-title {
       font-size: 1.5rem;
   }
-
+  .clientes-row{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  
+  }
   .tip-card h3 {
       font-size: 1.2rem;
   }
