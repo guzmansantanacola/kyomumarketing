@@ -1,0 +1,77 @@
+@use '../base/variables';
+#bodyNosotros {
+    background-color: variables.$background-dark;
+    color: variables.$white;
+  }
+  
+  .services-nosotros {
+    background-image: url('../images/waves2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .nosotros-card {
+    background-color: rgba(variables.$white, 0.1);
+    border: none;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    color: variables.$white;
+    min-height: 250px;
+  
+    &:hover {
+      transform: translateY(-5px);
+      background-color: rgba(variables.$white, 0.15);
+    }
+  
+    .card-title {
+      color: variables.$purple-dark;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+  
+      i {
+        margin-right: 10px;
+        color: variables.$white;
+      }
+    }
+  
+    .card-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+  
+  .valores-card {
+    background-color: rgba(variables.$purple-dark, 0.1);
+    border: none;
+    color: variables.$white;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      background-color: rgba(variables.$purple-dark, 0.15);
+    }
+  
+    i {
+      color: variables.$purple-dark;
+      margin-bottom: 1rem;
+    }
+  
+    h4 {
+      color: variables.$white;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .nosotrostitle {
+    padding: 5rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  
+  .valoresrow {
+    padding-bottom: 10rem;
+  }
+  

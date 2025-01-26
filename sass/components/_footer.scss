@@ -1,0 +1,40 @@
+@use '../base/variables';
+
+footer {
+    position: relative;
+    background-color: variables.$background-dark;
+    color: variables.$white;
+    padding: 2rem 0;
+    width: 100%;
+    margin-top: auto;
+  
+    #footerlogo {
+      width: 80px;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-family: variables.$font-raleway;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+    }
+  
+    .list-inline {
+      padding: 0;
+      margin: 1rem 0 0;
+    }
+  
+    .list-inline-item {
+      a {
+        color: variables.$white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: variables.$purple-light;
+        }
+      }
+    }
+  }
+  

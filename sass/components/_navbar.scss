@@ -1,0 +1,68 @@
+@use '../base/variables';
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  
+    &-toggler {
+      border: none;
+      outline: none;
+      color: white !important;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: variables.$accent-color !important;
+        transform: scale(1.2);
+      }
+  
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  
+    .nav-item {
+      a {
+        transition: all 0.3s ease;
+        color: variables.$white !important;
+  
+        &:hover {
+          text-decoration: underline;
+          color: #dac9df !important;
+          transform: scale(1.1);
+          text-shadow: 0 1px 2px #dac9df;
+        }
+      }
+    }
+  }
+  
+  #navbarhome {
+    font-size: 1.6rem;
+    font-family: variables.$font-roboto-slab;
+    font-weight: 400;
+    text-decoration: none;
+    color: variables.$white;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      text-decoration: underline;
+      color: variables.$purple-medium !important;
+      transform: scale(1.1);
+    }
+  }
+  
+  .nav-link {
+    &.active {
+      color: variables.$blue-medium !important;
+      text-decoration: underline;
+    }
+  }
+  
+  

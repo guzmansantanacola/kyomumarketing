@@ -1,0 +1,126 @@
+@use '../base/variables';
+@use '../base/mixins' as *;
+
+   
+  .clientes-title {
+    background-image: url('../images/shapes2.png');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    padding: 5rem;
+    font-family: variables.$font-roboto;
+    color: variables.$white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    @include tablet-lg {
+      font-size: 1.5rem;
+    }
+    
+    @include tablet {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  .tipstitulo {
+    background-image: url('../images/shapes.png');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    font-size: 2.5rem;
+    padding: 5rem;
+    font-family: variables.$font-roboto;
+    color: variables.$white;
+    font-weight: 300;
+  }
+  
+  .tiplist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      color: variables.$background-dark;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: start;
+      gap: 0.8rem;
+      line-height: 1.5;
+    }
+  }
+  
+  .clientes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);    
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  .tip-card {
+    padding: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(variables.$white, 0.1);
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+      color: variables.$background-dark;
+      margin-bottom: 10px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  
+  .clientes-row {
+    > div:nth-child(1) .tip-card { background-color: variables.$purple-medium; }
+    > div:nth-child(2) .tip-card { background-color: #a279ac; }
+    > div:nth-child(3) .tip-card { background-color: #b08dbd; }
+    > div:nth-child(4) .tip-card { background-color: variables.$blue-light; }
+    > div:nth-child(5) .tip-card { background-color: #4eb3ab; }
+    > div:nth-child(6) .tip-card { background-color: #7cccc5; }
+  }
+  
+  .cliente-card {
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    height: 100%;  
+  
+    img {
+      width: 200px;
+      height: 150px;
+    }
+  
+    h3 {
+      font-family: variables.$font-roboto;
+      color: #333;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #555;
+      font-family: variables.$font-roboto;
+      line-height: 1.5;
+    }
+  }
+  
+  .cliente-1 { background-color: #faba72; }
+  .cliente-2 { background-color: #f9f9f9; }
+  
+  

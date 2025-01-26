@@ -1,0 +1,74 @@
+@use '../base/variables';
+@use '../base/mixins' as *;
+.services-main {
+    display: block;
+    min-height: unset;
+  }
+  
+  .services-title {
+    text-align: center;
+    padding: 5rem;
+    font-family: variables.$font-roboto;
+    color: variables.$white;
+    font-weight: 300;
+  }
+  
+  .services-span {
+    color: variables.$purple-light;
+    font-family: variables.$font-roboto-slab;
+    font-weight: 400;
+  }
+  
+
+  .services-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include tablet-lg {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+  
+  .service-item {
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    height: 100%;         
+  
+    &:nth-child(1) { background-color: variables.$purple-medium; }
+    &:nth-child(2) { background-color: variables.$purple-light; }
+    &:nth-child(3) { background-color: variables.$blue-medium; }
+    &:nth-child(4) { background-color: variables.$blue-light; }
+  
+    h2 {
+      font-size: 1.5rem;
+      color: variables.$background-dark;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.3rem;
+      color: variables.$background-dark;
+    }
+  }
+  
+  .services-p {
+    padding: 3rem;
+  }
+  
+  .services-dropdown {
+    font-weight: 400;
+  }
+  
+  .services-contact {
+    text-decoration: none;
+    color: variables.$accent-color;
+  
+    &:hover {
+      color: variables.$blue-medium;
+    }
+  }
+  

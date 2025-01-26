@@ -1,0 +1,134 @@
+@use '../base/variables';
+#bodyContacto {
+    background-color: variables.$background-dark;
+    color: variables.$white;
+  }
+  
+  .contact-main {
+    min-height: calc(100vh - 200px);
+    background-image: url("../images/contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .title-contact {
+    color: #1a1a1a;
+    padding: 5rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  
+  .contact-form-card {
+    background-color: rgba(variables.$background-dark, 0.62);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    height: 100%;
+  
+    h2 {
+      color: variables.$purple-dark;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+  
+  .form-label {
+    color: variables.$white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    background-color: rgba(variables.$white, 0.05);
+    border: 1px solid rgba(variables.$purple-dark, 0.3);
+    color: variables.$white;
+    padding: 0.8rem;
+  
+    &:focus {
+      background-color: rgba(variables.$white, 0.1);
+      border-color: variables.$purple-dark;
+      color: variables.$white;
+      box-shadow: 0 0 0 0.25rem rgba(variables.$purple-dark, 0.25);
+    }
+  
+    &::placeholder {
+      color: rgba(variables.$white, 0.5);
+    }
+  }
+  
+  .contact-btn {
+    background-color: variables.$purple-dark;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: #9a6cb7;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .contact-info-card {
+    background-color: rgba(variables.$background-dark, 0.62);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    height: 100%;
+  
+    h2 {
+      color: variables.$purple-dark;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+  
+  .contactlogo{
+    width: 100%;
+    padding: 3rem;
+  }
+    .contact-info-item {
+        margin-bottom: 2rem;
+      
+        i {
+          font-size: 1.5rem;
+          color: variables.$purple-dark;
+          margin-right: 1rem;
+          margin-top: 0.25rem;
+        }
+      
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: variables.$white;
+        }
+      
+        p {
+          margin: 0;
+          color: rgba(variables.$white, 0.8);
+        }
+      }
+      
+      .contact-social {
+        margin-top: 3rem;
+      
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+          color: variables.$white;
+        }
+      }
+      
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .social-icon {
+        color: variables.$white;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      
+        &:hover {
+          color: variables.$purple-dark;
+          transform: translateY(-3px);
+        }
+      }
